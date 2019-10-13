@@ -18,10 +18,10 @@ In your .html file, add this to your `<head>` tag
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <!-- Optional Dependencies --->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aspnet-signalr/1.1.4/signalr.min.js"></script>
-<script src="https://raw.githubusercontent.com/itsmistad/network.js/master/network.js"></script>
+<script src="https://cdn.mistad.net/network.js"></script>
 <!-- notify.js --->
-<script src="https://raw.githubusercontent.com/itsmistad/notify.js/master/notify.js"></script>
-<link href="https://raw.githubusercontent.com/itsmistad/notify.js/master/notify.min.css" rel="stylesheet">
+<script src="https://cdn.mistad.net/notify.js"></script>
+<link href="https://cdn.mistad.net/notify.min.css" rel="stylesheet">
 ```
 
 ### Default Options
