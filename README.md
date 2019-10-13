@@ -1,3 +1,7 @@
+<img width="300px" src="https://cdn.mistad.net/211083.png"/>
+<br/>
+<img width="400px" src="https://cdn.mistad.net/607878.png"/>
+
 ## notify.js
 
 This is a simple, lightweight notification UI package for web applications.
@@ -17,6 +21,7 @@ In your .html file, add this to your `<head>` tag
 <script src="https://raw.githubusercontent.com/itsmistad/network.js/master/network.js"></script>
 <!-- notify.js --->
 <script src="https://raw.githubusercontent.com/itsmistad/notify.js/master/notify.js"></script>
+<link href="https://raw.githubusercontent.com/itsmistad/notify.js/master/notify.min.css" rel="stylesheet">
 ```
 
 ### Default Options
@@ -83,6 +88,17 @@ buttons: [
 ]
 ```
 
+### CSS
+
+`notify.js` uses the following style-class structure:
+```
+.notify-popup
+  ∟ .header
+  ∟ .subheader
+  ∟ .body
+  ∟ .buttons
+```
+
 ### Usage
 
 Initialize a notification sound:
@@ -103,19 +119,9 @@ Toggle the notification overlay layer:
 network.overlay(true, 300, 0.3);
 ```
 
-Create a notification:
+Create a center notification:
 `notify.me([options object])`
 ```js
-var notification = notify.me({
-    header: 'Notification Header',
-    subheader: 'Nice.',
-    body: 'This is a test!',
-    onStartClose: () => {
-        notify.overlay(false);
-    },
-    closeButton: true
-});
-notify.overlay(true);
 
 /*
  * notification contains the following properties:
@@ -124,4 +130,35 @@ notify.overlay(true);
  * - options (the options it was originally invoked with)
  * - close() (closes the notification)
  */
+var notification = notify.me({
+    header: 'Test Notification',
+    subheader: 'This is a test',
+    body: 'This is a test!',
+    onStartClose: () => {
+        notify.overlay(false);
+    },
+    closeButton: true
+});
+notify.overlay(true);
+```
+
+Create a corner notification:
+`notify.me([options object])`
+```js
+/*
+ * This assumes you have <div id="notification-queue"></div> somewhere on your page.
+ */
+notifiy.initSound('default', 'https://raw.githubusercontent.com/itsmistad/notify.js/master/notify.mp3');
+notify.me({
+    class: 'notify-popup corner',
+    subheader: 'Welcome',
+    body: 'This is a test corner notification.',
+    handleAsStack: true,
+    buttons: [],
+    fadeInDuration: 200,
+    fadeOutDuration: 300,
+    targetSelector: '#notification-queue',
+    targetMethod: 'prepend',
+    sound: 'default'
+});
 ```

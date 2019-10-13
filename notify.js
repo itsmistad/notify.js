@@ -258,7 +258,7 @@ var notify = new function() {
                     sound.then(_ => {
                         // Do... nothing?
                     }).catch(err => {
-                        console.error(`😞 notify.me failed to play the "${mergedOptions.sound}" sound because the user hasn't interacted with the page yet.`);
+                        console.error(`😞 notify.js failed to play the "${mergedOptions.sound}" sound because the user hasn't interacted with the page yet.`);
                     });
                 }
             }
