@@ -60,10 +60,11 @@ var notify = new function() {
     };
 
     // Initializes a connection to a SignalR Hub
-    obj.initNetwork = () => {
+    obj.initNetwork = action => {
         if (currentUser && network.init) {
-            network.init('/notify');
+            network.init('/Notify');
             network.on('ReceiveNotification', json => obj.me(json, true));
+            if (action) action();
             network.connect(err => {
                 if (err) console.error(err);
                 else obj.connected = true;

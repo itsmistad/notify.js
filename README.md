@@ -107,10 +107,12 @@ Initialize a notification sound:
 notify.initSound('/path/to/mp3/');
 ```
 
-Connect to the server's `/notify` hub:
-`notify.initNetwork()`
+Connect to the server's `/Notify` hub:
+`notify.initNetwork([optional action])`
 ```js
-notify.initNetwork();
+notify.initNetwork(() => {
+    // Do any additional stuff between the client and hub.
+});
 ```
 
 Toggle the notification overlay layer:
