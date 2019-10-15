@@ -150,7 +150,7 @@ Create a corner notification:
 /*
  * This assumes you have <div id="notification-queue"></div> somewhere on your page.
  */
-notifiy.initSound('default', 'https://raw.githubusercontent.com/itsmistad/notify.js/master/notify.mp3');
+notifiy.initSound('default', 'https://cdn.mistad.net/notify.mp3');
 notify.me({
     class: 'notify-popup corner',
     subheader: 'Welcome',
