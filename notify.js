@@ -41,7 +41,7 @@ var notify = new function() {
         onClose: () => { }, // The event that gets called when the notification is fully closed
         handleAsStack: false, // Toggles handling FIFO notification stacks by sliding down the notifications after an older sibling is closed
         maxInStack: 4, // The maximum amount of notifications that can be added to the stack at once when "handleAsStack" is true
-        sound: '', // The sound name that was specified with "notify.initSound(name, file)"
+        sound: null, // The sound name that was specified with "notify.initSound(name, file)"
         buttons: [
             {
                 text: 'OK',
