@@ -92,7 +92,7 @@ buttons: [
 
 `notify.js` uses the following style-class structure:
 ```
-.notify-popup
+.notify-popup | .notify-popup.corner
   ∟ .header
   ∟ .subheader
   ∟ .body
