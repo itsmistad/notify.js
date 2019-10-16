@@ -148,7 +148,7 @@ Create a corner notification:
 `notify.me([options object])`
 ```js
 /*
- * This assumes you have <div id="notification-queue"></div> somewhere on your page.
+ * This assumes you have <div id="notify-queue"></div> somewhere on your page.
  */
 notifiy.initSound('default', 'https://cdn.mistad.net/notify.mp3');
 notify.me({
@@ -159,7 +159,7 @@ notify.me({
     buttons: [],
     fadeInDuration: 200,
     fadeOutDuration: 300,
-    targetSelector: '#notification-queue',
+    targetSelector: '#notify-queue',
     targetMethod: 'prepend',
     sound: 'default'
 });
