@@ -114,7 +114,7 @@ var notify = new function() {
         var mergedOptions = { ...defaultOptions, ...options };
         for (const [key, value] of Object.entries(defaultOptions)) {
             // If the new option is null/undefined or if the new option is not the same type as the default, override with the default.
-            if (mergedOptions[key] == null || typeof mergedOptions[key] !== typeof defaultOptions[key])
+            if (mergedOptions[key] == null || (typeof mergedOptions[key] !== typeof defaultOptions[key] && defaultOptions[key] != null))
                 mergedOptions[key] = defaultOptions[key];
         }
 
