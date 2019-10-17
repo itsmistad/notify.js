@@ -1,5 +1,5 @@
 {
-  "name": "notify.js",
+  "name": "@itsmistad/notify.js",
   "version": "1.0.1",
   "description": "A simple notification UI package.",
   "main": "notify.js",
